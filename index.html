@@ -9,6 +9,9 @@ border: 0.5vh solid black;
 }
 input {
 border-radius: 0;
+font-size: 1vh;
+height: 10vh;
+width: 40vh;
 }
 </style>
 </head>
@@ -28,7 +31,7 @@ const w = document.getElementById("w");
 const h = document.getElementById("h");
 document.getElementById("s").addEventListener("click", function() {
 t.innerHTML = "";
-const size = "" + Math.floor(90 / h.value) + "vh";
+//const size = "" + Math.floor(90 / h.value) + "vh";
 for (let i = 0; i < Number(h.value); i++) {
 const tr = document.createElement("tr");
 t.appendChild(tr);
@@ -37,7 +40,7 @@ const td = document.createElement("td");
 tr.appendChild(td);
 const input = document.createElement("input");
 input.type = "text";
-input.style = "width: " + size + "; height: " + size;
+//input.style = "width: " + size + "; height: " + size;
 td.appendChild(input);
 };
 };

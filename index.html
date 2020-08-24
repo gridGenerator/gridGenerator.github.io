@@ -42,11 +42,9 @@ const w = document.getElementById("w");
 const h = document.getElementById("h");
 document.getElementById("s").addEventListener("click", function() {
 t.innerHTML = "";
-const hMin = Math.floor(90 / h.value);
-const wMin = Math.floor(90 / w.value);
-const size = "min(" + hMin + "vh, " + wMin + "vw)";
-const hMinFont = Math.floor(45 / h.value);
-const wMinFont = Math.floor(45 / w.value);
+const sizeH = Math.floor(90 / h.value) + "vh";
+const sizeW = Math.floor(90 / w.value) + "vw";
+const sizeFont = Math.floor(22.5 / h.value) + "vh";
 const sizeFont = "min(" + hMinFont + "vh, " + wMinFont + "vw)";
 for (let i = 0; i < Number(h.value); i++) {
 const tr = document.createElement("tr");
@@ -56,7 +54,7 @@ const td = document.createElement("td");
 tr.appendChild(td);
 const input = document.createElement("input");
 input.type = "text";
-input.style = "width: " + size + "; height: " + size + "; font-size: " + sizeFont;
+input.style = "width: " + sizeW + "; height: " + sizeH + "; font-size: " + sizeFont;
 td.appendChild(input);
 };
 };

@@ -28,11 +28,11 @@ const h = document.getElementById("h");
 const size = "" + Math.floor(90 / h.value) + "vh";
 document.getElementById("s").addEventListener("click", function() {
 window.alert("a");
-for (let i = 0; i < h.value; i++) {
+for (let i = 0; i < Number(h.value); i++) {
 const tr = document.createElement("tr");
 t.appendChild(tr);
 window.alert("b");
-for (let j = 0; j < w.value; j++) {
+for (let j = 0; j < Number(w.value); j++) {
 window.alert("c");
 const td = documment.createElement("td");
 tr.appendChild(td);

@@ -3,11 +3,12 @@
 <style>
 table {
 border-collapse: collapse;
-border: 1vw solid black;
-background-color: red;
 }
-table input {
-border: none;
+table, input {
+border: 1vw solid black;
+}
+input {
+border-radius: 0;
 }
 </style>
 </head>
@@ -26,6 +27,7 @@ const t = document.getElementById("t");
 const w = document.getElementById("w");
 const h = document.getElementById("h");
 const size = "" + Math.floor(90 / h.value) + "vh";
+window.alert(size);
 document.getElementById("s").addEventListener("click", function() {
 t.innerHTML = "";
 window.alert("a");

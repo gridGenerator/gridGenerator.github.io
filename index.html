@@ -27,16 +27,21 @@ const w = document.getElementById("w");
 const h = document.getElementById("h");
 const size = "" + Math.floor(90 / h.value) + "vh";
 document.getElementById("s").addEventListener("click", function() {
+window.alert("a");
 for (let i = 0; i < h.value; i++) {
 const tr = document.createElement("tr");
 t.appendChild(tr);
-for (let j = 1; j < w.value; j++) {
+window.alert("b");
+for (let j = 0; j < w.value; j++) {
+window.alert("c");
 const td = documment.createElement("td");
 tr.appendChild(td);
+window.alert("d");
 const input = document.createElement("input");
 input.type = "text";
 input.style = "width: " + size + "; height: " + size;
 td.appendChild(input);
+window.alert("e");
 window.alert(t);
 window.alert(tr);
 window.alert(td);

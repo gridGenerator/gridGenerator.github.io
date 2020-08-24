@@ -9,9 +9,9 @@ border: 0.5vh solid black;
 }
 input {
 border-radius: 0;
-font-size: 3vh;
+/*font-size: 3vh;
 height: 6vh;
-width: 24vh;
+width: 24vh;*/
 border: none;
 background-color: RGBA(0,0,0,0);
 }
@@ -42,7 +42,12 @@ const w = document.getElementById("w");
 const h = document.getElementById("h");
 document.getElementById("s").addEventListener("click", function() {
 t.innerHTML = "";
-//const size = "" + Math.floor(90 / h.value) + "vh";
+const hMin = Math.floor(90 / h.value);
+const wMin = Math.floor(90 / w.value);
+const size = "min(" + hMin + "vh, " + wMin + "vw)";
+const hMinFont = Math.floor(45 / h.value);
+const wMinFont = Math.floor(45 / w.value);
+const sizeFont = "min(" + hMinFont + "vh, " + wMinFont + "vw)";
 for (let i = 0; i < Number(h.value); i++) {
 const tr = document.createElement("tr");
 t.appendChild(tr);
@@ -51,7 +56,7 @@ const td = document.createElement("td");
 tr.appendChild(td);
 const input = document.createElement("input");
 input.type = "text";
-//input.style = "width: " + size + "; height: " + size;
+input.style = "width: " + size + "; height: " + size + "; font-size: 
 td.appendChild(input);
 };
 };

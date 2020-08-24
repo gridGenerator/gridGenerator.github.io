@@ -21,13 +21,12 @@ Generate
 </body>
 <script>
 try {
-window.alert("x");
-  document.body.style = "background-color: green";
 const t = document.getElementById("t");
 const w = document.getElementById("w");
 const h = document.getElementById("h");
 const size = "" + Math.floor(90 / h.value) + "vh";
 document.getElementById("s").addEventListener("click", function() {
+window.alert("f");
 for (let i = 0; i < h.value; i++) {
 const tr = document.createElement("tr");
 t.appendChild(tr);

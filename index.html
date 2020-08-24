@@ -9,6 +9,8 @@ border: 1vw solid black;
 }
 input {
 border-radius: 0;
+width: 100%;
+height: 100%;
 }
 </style>
 </head>
@@ -30,26 +32,17 @@ const size = "" + Math.floor(90 / h.value) + "vh";
 window.alert(size);
 document.getElementById("s").addEventListener("click", function() {
 t.innerHTML = "";
-window.alert("a");
 for (let i = 0; i < Number(h.value); i++) {
 const tr = document.createElement("tr");
 t.appendChild(tr);
-window.alert("b");
 for (let j = 0; j < Number(w.value); j++) {
-window.alert("c");
 const td = document.createElement("td");
+td.style = "width: " + size + "; height: " + size;
 tr.appendChild(td);
-window.alert("d");
 const input = document.createElement("input");
 input.type = "text";
-input.style = "width: " + size + "; height: " + size;
 td.appendChild(input);
-window.alert("e");
-window.alert(t);
-window.alert(tr);
-window.alert(td);
-window.alert(input);
-}
+};
 };
 });
 } catch (e) {

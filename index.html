@@ -16,10 +16,11 @@ border: none;
 <input type="number" step="1" min="1" id="w" />
 <input type="number" step="1" min="1" id="h" />
 <button id="s">
-Geneate
+Generate
 </button>
 </body>
 <script>
+try {
 const t = document.getElementById("t");
 const w = document.getElementById("w");
 const h = document.getElementById("h");
@@ -38,5 +39,9 @@ td.appendChild(input);
 }
 };
 });
+} catch (e) {
+document.body.innerHTML = e;
+document.body.style = "background-color: red";
+};
 </script>
 </html>

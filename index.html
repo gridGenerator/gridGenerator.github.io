@@ -67,6 +67,7 @@ d.value = "";
 };
 
 document.getElementById("s").addEventListener("click", function() {
+save();
 t.innerHTML = "";
 const sizeH = (80 / h.value) + "vh";
 const sizeW = (90 / w.value) + "vw";
@@ -83,6 +84,7 @@ input.style = "width: " + sizeW + "; height: " + sizeH + "; font-size: " + sizeF
 td.appendChild(input);
 };
 };
+load();
 });
 } catch (e) {
 document.body.innerHTML = e;

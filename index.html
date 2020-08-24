@@ -47,21 +47,30 @@ for (let i = 0; i < t.children.length; i++) {
 data[i] = [];
 const r = t.children[i];
 for (let j = 0; j < r.children.length; j++) {
-const d = r.children[j];
+const d = r.children[j].children[0];
 data[i][j] = d.value;
 };
 };
 };
 function load() {
-
+for (let i = 0; i < t.children.length; i++) {
+const r = t.children[i];
+for (let j = 0; j < r.children.length; j++) {
+const d = r.children[j].children[0];
+if (data[i][j] !== undefined) {
+d.value = data[i][j];
+} else {
+d.value = "";
+};
+};
+};
 };
 
 document.getElementById("s").addEventListener("click", function() {
 t.innerHTML = "";
-const sizeH = Math.floor(90 / h.value) + "vh";
-const sizeW = Math.floor(90 / w.value) + "vw";
-const sizeFont = Math.floor(22.5 / h.value) + "vh";
-const sizeFont = "min(" + hMinFont + "vh, " + wMinFont + "vw)";
+const sizeH = (90 / h.value) + "vh";
+const sizeW = (90 / w.value) + "vw";
+const sizeFont = (22.5 / h.value) + "vh";
 for (let i = 0; i < Number(h.value); i++) {
 const tr = document.createElement("tr");
 t.appendChild(tr);

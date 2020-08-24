@@ -67,7 +67,6 @@ d.value = "";
 };
 
 document.getElementById("s").addEventListener("click", function() {
-save();
 t.innerHTML = "";
 const sizeH = (80 / h.value) + "vh";
 const sizeW = (90 / w.value) + "vw";
@@ -85,6 +84,7 @@ td.appendChild(input);
 };
 };
 load();
+save();
 });
 } catch (e) {
 document.body.innerHTML = e;

@@ -68,10 +68,13 @@ d.value = "";
 
 document.getElementById("s").addEventListener("click", function() {
 t.innerHTML = "";
+  window.alert("a");
 const sizeH = (90 / h.value) + "vh";
 const sizeW = (90 / w.value) + "vw";
 const sizeFont = (22.5 / h.value) + "vh";
+  window.alert("b");
 for (let i = 0; i < Number(h.value); i++) {
+  window.alert("c");
 const tr = document.createElement("tr");
 t.appendChild(tr);
 for (let j = 0; j < Number(w.value); j++) {

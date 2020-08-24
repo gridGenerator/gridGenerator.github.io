@@ -28,19 +28,18 @@ try {
 const t = document.getElementById("t");
 const w = document.getElementById("w");
 const h = document.getElementById("h");
-const size = "" + Math.floor(90 / h.value) + "vh";
-window.alert(size);
 document.getElementById("s").addEventListener("click", function() {
 t.innerHTML = "";
+const size = "" + Math.floor(90 / h.value) + "vh";
 for (let i = 0; i < Number(h.value); i++) {
 const tr = document.createElement("tr");
 t.appendChild(tr);
 for (let j = 0; j < Number(w.value); j++) {
 const td = document.createElement("td");
-td.style = "width: " + size + "; height: " + size;
 tr.appendChild(td);
 const input = document.createElement("input");
 input.type = "text";
+input.style = "width: " + size + "; height: " + size;
 td.appendChild(input);
 };
 };

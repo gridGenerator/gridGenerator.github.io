@@ -40,6 +40,22 @@ try {
 const t = document.getElementById("t");
 const w = document.getElementById("w");
 const h = document.getElementById("h");
+
+let data = [];
+function save() {
+for (let i = 0; i < t.children.length; i++) {
+data[i] = [];
+const r = t.children[i];
+for (let j = 0; j < r.children.length; j++) {
+const d = r.children[j];
+data[i][j] = d.value;
+};
+};
+};
+function load() {
+
+};
+
 document.getElementById("s").addEventListener("click", function() {
 t.innerHTML = "";
 const sizeH = Math.floor(90 / h.value) + "vh";
